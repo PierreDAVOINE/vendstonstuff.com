@@ -1,0 +1,18 @@
+header {
+  height: 10vh;
+  width: 100%;
+  background: lightgray;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background: lightgray;
+}
+
+/*# sourceMappingURL=style.css.map */

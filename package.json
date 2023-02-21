@@ -1,0 +1,11 @@
+{
+  "name": "vendstonstuffv0",
+  "version": "0.0.0",
+  "description": "Bases pour un futur projet de site de vente en ligne pour particulier de matériel numérique, infirmatique",
+  "main": "serveur.js",
+  "scripts": {
+    "style": "sass --watch ./public/sass/style.scss ./public/css/style.css"
+  },
+  "author": "Pierre Davoine",
+  "license": "ISC"
+}
