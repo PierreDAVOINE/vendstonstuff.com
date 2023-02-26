@@ -4,8 +4,14 @@
   "description": "Bases pour un futur projet de site de vente en ligne pour particulier de matériel numérique, infirmatique",
   "main": "serveur.js",
   "scripts": {
-    "style": "sass --watch ./public/sass/style.scss ./public/css/style.css"
+    "style": "sass --watch ./public/sass/style.scss ./public/css/style.css",
+    "build": "postcss -w public/tailwind/tailwind.css -o public/css/style.css"
   },
   "author": "Pierre Davoine",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.7"
+  }
 }
