@@ -1,6 +1,12 @@
 # vendstonstuffV0
 
-Bases pour un side projects vends ton stuff informatique, consoles etc.
+Projet d'entrainement fullstack. Je part ici sur la création d'un site de vente, achat ou échange de matériel multimédia : pc, consoles, composants, accessoires. Le tout, d'occasion...
+
+Je me suis fixé plusieurs objectifs : 
+- Tout d'abord pouvoir y aller par étape, dans un premier temps, avoir une base fonctionnelle puis rajouter une feature à la fois.
+- Utiliser le framework tailwind css pour le front.
+- Utiliser node js avec express et ejs pour le serveur.
+- Utiliser postrgreSQL pour la BDD avec Sequelize en ORM.
 
 ## 1 : USER STORIES
 
@@ -36,7 +42,7 @@ have, 1N tag, 0N product
 
 ## 3 : MLD
 
-**have** (<ins>_#id_tag_</ins>, <ins>_#id_product_</ins>)<br>
 **product** (<ins>id_product</ins>, name, ref, year, description, tag, _#id_user_)<br>
 **tag** (<ins>id_tag</ins>, name)<br>
-**user** (<ins>id_user</ins>, firstname, lastname, email, password, role)
+**user** (<ins>id_user</ins>, firstname, lastname, email, password, role)<br>
+**have** (<ins>_#id_tag_</ins>, <ins>_#id_product_</ins>)

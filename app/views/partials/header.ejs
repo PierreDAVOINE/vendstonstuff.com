@@ -1,0 +1,31 @@
+<body class="bg-gray-800 text-white">
+    <header class="bg-blue-400 py-2 px-5 mt-10 flex flex-col lg:flex-row justify-between items-center text-white">
+        <h1 class="text-xl text-center font-bold pb-2"><a href="index.html" class="cursor-pointer">Vends ton
+                stuff</a>
+        </h1>
+        <form action="/search" method="get" class="flex gap-1 sm:gap-5">
+
+            <label class="xl:pt-1 text-gray-700 w-50 font-bold text-lg md:text-2xl" for="username">
+                Je recherche :
+            </label>
+            <input
+                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-10"
+                id="username" type="text" placeholder="Pc portable">
+
+            <div class="flex items-center justify-between mb-5 md:mb-0">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline h-10 w-10"
+                    type="button">
+                    <img src="/img/loupe.svg" alt="loupe" class="w-full">
+                </button>
+            </div>
+        </form>
+        <nav>
+            <ul class="flex gap-5">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Vendre</a></li>
+                <li><a href="#">Se connecter</a></li>
+                <li><a href="#">Créer un compte</a></li>
+            </ul>
+        </nav>
+    </header>
