@@ -7,6 +7,8 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
+// TODO : Rendre dynamique les articles
+
 // Settings pour EjS
 app.set("view engine", "ejs");
 app.set("views", "./app/views");
@@ -16,6 +18,6 @@ app.use(express.static(path.join(__dirname, "./public")));
 
 app.use(router);
 
-app.listen(port, (_) => {
+app.listen(port, () => {
   console.log(`🚀 Serveur start on http://localhost:${port}`);
 });

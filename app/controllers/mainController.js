@@ -1,7 +1,10 @@
 const mainController = {
   home: (req, res) => {
-    console.log("coucou");
     res.render("home");
+  },
+
+  product: (req, res) => {
+    res.render("product");
   },
 };
 

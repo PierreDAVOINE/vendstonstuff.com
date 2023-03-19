@@ -46,3 +46,9 @@ have, 1N tag, 0N product
 **tag** (<ins>id_tag</ins>, name)<br>
 **user** (<ins>id_user</ins>, firstname, lastname, email, password, role)<br>
 **have** (<ins>_#id_tag_</ins>, <ins>_#id_product_</ins>)
+
+## TODO :
+- [x] bdd mongodb crée
+- [ ] Rendre la génération des article dynamique
+- [ ] Quelques données bateaux
+- [ ] Route de l'api
