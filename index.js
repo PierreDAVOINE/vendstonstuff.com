@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
 // Définit "public" comme dossier static contenant css, img, etc..
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './public/')));
 
 app.use(express.json());
 
