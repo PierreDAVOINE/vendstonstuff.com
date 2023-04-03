@@ -1,5 +1,5 @@
 // on ne require pas le module mongoose, on require l'instance déjà connectée !
-const { Schema, model } = require("../database");
+const { Schema, model } = require('../database');
 
 // on commence par définir un schéma : c'est le format de données
 // c'est ce qui nous permet de s'assurer une certaine cohérence entre tous les documents
@@ -7,6 +7,7 @@ const { Schema, model } = require("../database");
 const articleSchema = new Schema({
   id: Number, // id est un nombre
   name: String, // name est une chaine de caractères
+  tag: String,
   img: String,
   state: String,
   description: String,
@@ -16,7 +17,7 @@ const articleSchema = new Schema({
 // - un nom, arbitraire
 // - un schéma
 // - le nom de la collection
-const Article = model("Article", articleSchema, "article");
+const Article = model('Article', articleSchema, 'article');
 
 // il nous reste à exporter le model
 module.exports = Article;
