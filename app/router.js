@@ -8,7 +8,7 @@ const articleController = require('./controllers/articleController');
 
 // Route home
 router.get('/', mainController.home);
-router.get('/product', mainController.product);
+router.get('/product/:id', mainController.product);
 
 // Routes API : lectures
 router.get('/articles', articleController.getAllArticle);

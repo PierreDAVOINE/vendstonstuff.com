@@ -7,8 +7,6 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-// TODO : Rendre dynamique les articles
-
 // Settings pour EjS
 app.set('view engine', 'ejs');
 app.set('views', './app/views');

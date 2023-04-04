@@ -19,7 +19,7 @@ const articleController = {
       const articles = await Article.find({
         $or: [
           { name: { $regex: '.*' + word + '.*', $options: 'i' } },
-          { description: { $regex: '.*' + word + '.*', $options: 'i' } },
+          { tag: { $regex: '.*' + word + '.*', $options: 'i' } },
         ],
       });
       console.log(articles);
