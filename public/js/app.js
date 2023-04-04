@@ -1,3 +1,5 @@
+// TODO: Table user. user id on articles. Systeme de sign in, login ,logout
+
 const app = {
   base_url: 'http://localhost:5000',
   productListEl: document.getElementById('product-list'),
@@ -44,21 +46,25 @@ const app = {
     img.setAttribute('alt', article.name);
     img.className = 'w-full';
     // Création de la description de l'article
-    const description = document.createElement('p');
-    description.textContent = article.description;
+    const state = document.createElement('p');
+    state.textContent = `Etat : ${article.state}`;
     // Création du footer de l'article
     const divFooter = document.createElement('div');
     divFooter.className = 'flex justify-between items-center';
     // Création du tag d'état
-    const state = document.createElement('p');
-    state.textContent = `Etat: ${article.state}`;
+    const price = document.createElement('p');
+    price.textContent = `Prix : ${article.price}€`;
+    // Création du bloc left du footer
+    const divLeftFooter = document.createElement('div');
+    divLeftFooter.append(state, price);
+    // Création du bouton
     const productLink = document.createElement('a');
     productLink.setAttribute('href', `${app.base_url}/product/${article._id}`);
     productLink.className =
       'px-3 pb-2 pt-1 border-2 border-sky-900 rounded-full bg-violet-800 cursor-pointer hover:bg-blue-400 transition ease-in-out';
     productLink.textContent = 'Regarder cet article';
-    divFooter.append(state, productLink);
-    divParent.append(title, img, description, divFooter);
+    divFooter.append(divLeftFooter, productLink);
+    divParent.append(title, img, divFooter);
 
     app.productListEl.appendChild(divParent);
   },

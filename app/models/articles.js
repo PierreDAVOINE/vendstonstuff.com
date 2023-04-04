@@ -11,6 +11,7 @@ const articleSchema = new Schema({
   img: String,
   state: String,
   description: String,
+  price: Number,
 });
 
 // on crée le model à partir de:
