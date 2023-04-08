@@ -1,4 +1,4 @@
-// TODO: Table user. user id on articles. Systeme de sign in, login ,logout
+// TODO: Table user. user id on articles. pseudo du vendeur sur fiche produit . Systeme de sign in, login ,logout
 
 const app = {
   base_url: 'http://localhost:5000',

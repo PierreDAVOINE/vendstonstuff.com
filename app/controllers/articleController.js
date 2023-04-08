@@ -1,10 +1,10 @@
-const Article = require('../models/articles');
+const Articles = require('../models/articles');
 const { all } = require('../router');
 
 const articleController = {
   getAllArticle: async (req, res) => {
     try {
-      const allArticles = await Article.find();
+      const allArticles = await Articles.find();
       console.log(allArticles);
       res.json(allArticles);
     } catch (error) {
@@ -16,7 +16,7 @@ const articleController = {
   getArticlesByKeyword: async (req, res) => {
     const { word } = req.params;
     try {
-      const articles = await Article.find({
+      const articles = await Articles.find({
         $or: [
           { name: { $regex: '.*' + word + '.*', $options: 'i' } },
           { tag: { $regex: '.*' + word + '.*', $options: 'i' } },
@@ -32,7 +32,7 @@ const articleController = {
   getOneArticle: async (req, res) => {
     const { id } = req.params;
     try {
-      const article = await Article.findById(id);
+      const article = await Articles.findById(id);
       console.log(article);
       res.json(article);
     } catch (error) {
@@ -44,7 +44,7 @@ const articleController = {
     console.log("Création d'un nouvel article en cour...");
     const { name, tag, img, state, description } = req.body;
     try {
-      const article = await Article.create({
+      const article = await Articles.create({
         name: name,
         tag: tag,
         img: img,

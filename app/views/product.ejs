@@ -9,7 +9,7 @@
                 d'occasion.</h3>
             <!-- Description du produit -->
             <div class="w-full border-2 border-solid border-white p-5">
-                <h3 class="p-2 font-bold text-violet-800 bg-gray-400">
+                <h3 class="p-2 font-bold text-violet-800 bg-gray-400 mb-4">
                     <%= article.name %>
                 </h3>
                 <div class="md:flex">
@@ -27,9 +27,14 @@
                                         <%= article.price %>€
                                     </span></p>
                             </div>
-                            <a href="product.html"
-                                class="px-3 pb-2 pt-1 border-2 border-sky-900 rounded-full bg-violet-800 cursor-pointer hover:bg-blue-400 transition ease-in-out">Contacter
-                                le vendeur</a>
+                            <div class="flex flex-col items-start gap-4">
+                                <span>
+                                    Nom du vendeur : <%= article.user[0].nickname %>
+                                </span>
+                                <a href="product.html"
+                                    class="px-3 pb-2 pt-1 border-2 border-sky-900 rounded-full bg-violet-800 cursor-pointer hover:bg-blue-400 transition ease-in-out">Le
+                                    contacter</a>
+                            </div>
                         </div>
                     </div>
                 </div>
